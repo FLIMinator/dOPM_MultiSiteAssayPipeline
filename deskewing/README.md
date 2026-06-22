@@ -82,7 +82,7 @@ The pipeline is designed so that conversion and fusion steps can be run from com
 
 Typical cluster usage is to split work by well, tile, timepoint, or processing stage. For example:
 
-```text
+
 1. Convert bead data and run bead registration once.
 2. Reuse the registered bead XML for multiple sample wells.
 3. Submit sample deskew jobs per well or plate region.
