@@ -1,0 +1,49 @@
+# Test config for the D:\temp\test_data sample dataset using well-less bead filenames.
+#
+# This proves the bead parser can process bead ND2 filenames that do not contain
+# a _WellXX or __WellXX suffix:
+#
+#   D:\temp\test_data\data  -> sample data, contains WellF5 and WellF6
+#   D:\temp\test_data\v1    -> bead data without a WellXX filename suffix
+#
+# v1 is treated as one logical bead well named C2. The logical well name is used
+# for output naming only, producing dataset_WellC2.xml.
+
+pipeline_settings:
+  workflow: process_single_well
+  well_id: F5
+  bead_well_id: C2
+
+processing:
+  mode: "deskew_with_beads"
+
+bead_data:
+  type: "remote_scanning"
+  input_path: D:\temp\test_data\v1
+  output_path: D:\temp\test_data\bead_output_C2_wellless
+  allow_wellless_filenames: true
+  hardcoded_vars:
+    pix_x: 0.35
+    mirror_tilt: 17.5
+
+data:
+  input_path: D:\temp\test_data\data
+  output_path: D:\temp\test_data\sample_output_F5_deskew_with_beads_wellless
+  pattern: ''
+  allow_wellless_filenames: false
+
+deskewing:
+  scan_type: "remote_scanning"
+  hardcoded_vars:
+    pix_x: 0.35
+    mirror_tilt: 17.5
+
+registration:
+  auto_register: true
+  registered_bead_xml_path: D:\temp\test_data\bead_output_C2_wellless\dataset_WellC2.xml
+
+fusion:
+  bdv_dataset_xml: D:\temp\test_data\sample_output_F5_deskew_with_beads_wellless\dataset_WellF5_registered.xml
+  binning: 2
+
+fiji_executable_path: C:\Users\User\Documents\GitHub\dopm_processing\fiji-2.9.0-win64\Fiji.app\ImageJ-win64.exe
