@@ -7,7 +7,7 @@ from matplotlib.lines import Line2D
 # --- File paths and condition mappings ---
 files_with_mappings = [
     {
-        "file_path": 'D:/temp/CrossPartner/csvs_R1/IRB/main_quantification.csv',
+        "file_path": '.data/IRB/main_quantification.csv',
         "row_to_condition_mapping": {
             'B': 'DMSO', 'C': '100 nM TPA', 'D': '20 nM Binimetinib',
             'E': '60 nM Binimetinib', 'F': '200 nM Binimetinib', 'G': '3.5 µM Binimetinib'
@@ -15,7 +15,7 @@ files_with_mappings = [
         "label_anon": "1"
     },
     {
-        "file_path": 'D:/temp/CrossPartner/csvs_R1/IGC/main_quantification.csv',
+        "file_path": '.data/IGC/main_quantification.csv',
         "row_to_condition_mapping": {
             'B': 'DMSO', 'G': '100 nM TPA', 'F': '20 nM Binimetinib',
             'E': '60 nM Binimetinib', 'D': '200 nM Binimetinib', 'C': '3.5 µM Binimetinib'
@@ -23,7 +23,7 @@ files_with_mappings = [
         "label_anon": "2"
     },
     {
-        "file_path": 'D:/temp/CrossPartner/csvs_R1/Crick/main_quantification.csv',
+        "file_path": '.data/Crick/main_quantification.csv',
         "row_to_condition_mapping": {
             'B': 'DMSO', 'C': '100 nM TPA', 'D': '20 nM Binimetinib',
             'E': '60 nM Binimetinib', 'F': '200 nM Binimetinib', 'G': '3.5 µM Binimetinib'
@@ -31,7 +31,7 @@ files_with_mappings = [
         "label_anon": "3"
     },
     {
-        "file_path": 'D:/temp/CrossPartner/csvs_R1/ICR/main_quantification.csv',
+        "file_path": '.data/ICR/main_quantification.csv',
         "row_to_condition_mapping": {
             'B': 'DMSO', 'C': '100 nM TPA', 'D': '20 nM Binimetinib',
             'E': '60 nM Binimetinib', 'F': '200 nM Binimetinib', 'G': '3.5 µM Binimetinib'
@@ -155,9 +155,9 @@ for idx, ax in enumerate(axes):
 
 plt.xticks(fontsize=12)
 plt.tight_layout()
-plt.savefig('cross_partner_intensity_3x1.png', dpi=300, bbox_inches='tight')
+plt.savefig('SuppFig3.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 # Export combined data
 pd.concat(combined_data, ignore_index=True).to_csv('combined_intensity_data.csv', index=False)
-print("✅ Done! Saved 'cross_partner_intensity_3x1.png' and 'combined_intensity_data.csv'")
+print("Done! Saved 'cross_partner_intensity_3x1.png' and 'combined_intensity_data.csv'")

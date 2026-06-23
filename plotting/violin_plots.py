@@ -31,7 +31,7 @@ from matplotlib.patches import Patch
 # ---------------------------------------------------------------------
 files_with_mappings = [
     {
-        "file_path": r'D:/temp/CrossPartner/csvs_R1/IRB/main_quantification.csv',
+        "file_path": r'./data/IRB/main_quantification.csv',
         "row_to_condition_mapping": {
             'B': 'DMSO',
             'C': '100 nM TPA',
@@ -43,7 +43,7 @@ files_with_mappings = [
         "label_anon": "1"
     },
     {
-        "file_path": r'D:/temp/CrossPartner/csvs_R1/IGC/main_quantification.csv',
+        "file_path": r'./data/IGC/main_quantification.csv',
         "row_to_condition_mapping": {
             'B': 'DMSO',
             'G': '100 nM TPA',
@@ -55,7 +55,7 @@ files_with_mappings = [
         "label_anon": "2"
     },
     {
-        "file_path": r'D:/temp/CrossPartner/csvs_R1/Crick/main_quantification.csv',
+        "file_path": r'./data/Crick/main_quantification.csv',
         "row_to_condition_mapping": {
             'B': 'DMSO',
             'C': '100 nM TPA',
@@ -67,7 +67,7 @@ files_with_mappings = [
         "label_anon": "3"
     },
     {
-        "file_path": r'D:/temp/CrossPartner/csvs_R1/ICR/main_quantification.csv',
+        "file_path": r'./data/ICR/main_quantification.csv',
         "row_to_condition_mapping": {
             'B': 'DMSO',
             'C': '100 nM TPA',
@@ -312,7 +312,7 @@ plot_grouped_violins(
     seed=12345
 )
 
-print("✅ Saved: cross_site_spheroid_size_violin_.png")
-print("✅ Saved: cross_site_sensor_ratio_violin_.png")
-print("✅ Saved: combined_spheroid_size_per_spheroid_.csv")
-print("✅ Saved: combined_sensor_ratio_per_spheroid_.csv")
+print("Saved: Fig5b.png")
+print("Saved: Fig5a.png")
+print("Saved: combined_spheroid_size_per_spheroid.csv")
+print("Saved: combined_sensor_ratio_per_spheroid.csv")
