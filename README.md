@@ -4,6 +4,10 @@ Archival code and processed data snapshot accompanying the paper:
 
 **Multi-Site Reproducibility Study of 3D High-Content Analysis with Dual-View Oblique Plane Microscopy**
 
+The data underlying the paper is freely available here:
+
+<https://www.ebi.ac.uk/biostudies/submissions/edit/S-BIAD3591>
+
 This repository records the acquisition, pre-finding, deskewing/fusion, quantification, plotting and statistical-analysis workflow used for the multi-site dOPM reproducibility study.
 
 The repository is intended to help readers understand how the analysis was performed, inspect the processed data, and trace the scripts used to generate the paper figures and statistical outputs. 
