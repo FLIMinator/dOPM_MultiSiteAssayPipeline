@@ -86,116 +86,6 @@ Fiji is used for:
 3. BigStitcher fusion of BDV datasets
 ```
 
-## Validation configs
-
-Run all commands from the repository root.
-
-### 1. Geometry-only deskew
-
-Config:
-
-```text
-deskewing_pipeline\configs\test_pipeline.yaml
-```
-
-Run:
-
-```powershell
-python validate_test_output.py --config deskewing_pipeline\configs\test_pipeline.yaml --run-pipeline
-```
-
-This processes sample data from:
-
-```text
-D:\temp\test_data\data
-```
-
-and creates a geometric BDV dataset for:
-
-```text
-WellF5
-```
-
-Expected output:
-
-```text
-D:\temp\test_data\sample_output_F5_deskew\dataset_WellF5.xml
-D:\temp\test_data\sample_output_F5_deskew\dataset_WellF5.h5
-```
-
-### 2. Bead-registered deskew using Well-tagged bead files
-
-Config:
-
-```text
-deskewing_pipeline\configs\test_pipeline_with_beads.yaml
-```
-
-Run:
-
-```powershell
-python validate_test_output.py --config deskewing_pipeline\configs\test_pipeline_with_beads.yaml --run-pipeline
-```
-
-This uses bead files from:
-
-```text
-D:\temp\test_data\v2
-```
-
-and creates/registers:
-
-```text
-D:\temp\test_data\bead_output_C2\dataset_WellC2.xml
-```
-
-The sample data from `data/WellF5` are then converted using the bead registration transforms.
-
-Expected registered sample output:
-
-```text
-D:\temp\test_data\sample_output_F5_deskew_with_beads\dataset_WellF5_registered.xml
-D:\temp\test_data\sample_output_F5_deskew_with_beads\dataset_WellF5_registered.h5
-```
-
-### 3. Bead-registered deskew using well-less bead files
-
-Config:
-
-```text
-deskewing_pipeline\configs\test_pipeline_with_beads_wellless.yaml
-```
-
-Run:
-
-```powershell
-python validate_test_output.py --config deskewing_pipeline\configs\test_pipeline_with_beads_wellless.yaml --run-pipeline
-```
-
-This uses bead files from:
-
-```text
-D:\temp\test_data\v1
-```
-
-These filenames do not contain a `WellXX` suffix, so the config enables:
-
-```yaml
-allow_wellless_filenames: true
-```
-
-and treats the folder as one logical bead well:
-
-```yaml
-bead_well_id: C2
-```
-
-Expected bead XML:
-
-```text
-D:\temp\test_data\bead_output_C2_wellless\dataset_WellC2.xml
-```
-
 ## Important config fields
 
 ### Sample well
@@ -242,21 +132,6 @@ bead_data:
 
 If `bead_data.hardcoded_vars` is not provided, the scripts may fall back to `deskewing.hardcoded_vars`.
 
-## Output validation
-
-`validate_test_output.py` checks:
-
-```text
-1. Bead BDV XML/H5 output, where relevant
-2. Sample BDV XML/H5 output
-3. Fused TIFF stacks, where fusion is configured
-```
-
-A successful full bead-registered run ends with:
-
-```text
-OK: All three modes validated successfully!
-```
 
 ## Rerunning tests
 

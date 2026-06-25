@@ -15,8 +15,6 @@ src/dopm/
 deskewing_pipeline/
     Pipeline configs and command-line wrappers.
 
-validate_test_output.py
-    Local integration validation script for deskewing, bead registration, and fusion outputs.
 ```
 
 ## Main workflows
@@ -46,33 +44,10 @@ Registered or geometric BDV datasets can be fused using Fiji/BigStitcher into TI
 BDV XML/H5 -> fused TIFF stacks
 ```
 
-## Local validation
-
-The validation script is run from the repository root.
-
-Geometry-only validation:
-
-```powershell
-python validate_test_output.py --config deskewing_pipeline\configs\test_pipeline.yaml --run-pipeline
-```
-
-Bead-registered validation using bead files with a `Well` suffix:
-
-```powershell
-python validate_test_output.py --config deskewing_pipeline\configs\test_pipeline_with_beads.yaml --run-pipeline
-```
-
-Bead-registered validation using bead files without a `Well` suffix:
-
-```powershell
-python validate_test_output.py --config deskewing_pipeline\configs\test_pipeline_with_beads_wellless.yaml --run-pipeline
-```
-
 See `deskewing_pipeline/README.md` for the expected local test-data layout and configuration details.
 
 ## Notes
 
-* The validation configs assume a local Windows test dataset under `D:\temp\test_data`.
 * Fiji/ImageJ must be available at the path specified in the YAML configs.
 * Bead and sample data may use either `__WellXX` filename suffixes or well-less filenames, provided the corresponding config enables `allow_wellless_filenames: true`.
 
