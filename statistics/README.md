@@ -2,7 +2,8 @@
 
 This folder contains the R Markdown analysis used for the mixed-effects statistical analysis in the paper snapshot.
 
-This analysis was contributed separately from the image-processing and plotting code, so this README intentionally keeps the technical detail light. For interpretation of the model results, treatment effects and site effects, see the accompanying paper.
+The statistical analysis in this folder was contributed by Kanad N. Mandke. It was contributed separately from the image-processing and plotting code. For interpretation of the model results, treatment effects and site effects, see the accompanying paper.
+
 
 ## Main files
 

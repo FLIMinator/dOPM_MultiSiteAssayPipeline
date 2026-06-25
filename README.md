@@ -154,8 +154,21 @@ If using this repository, please cite the associated paper:
 
 **Multi-Site Reproducibility Study of 3D High-Content Analysis with Dual-View Oblique Plane Microscopy**
 
-A formal citation/DOI should be added here once available.
+
+## Contributors
+
+This repository contains contributions from:
+
+* Hugh Sparks — repository assembly, acquisition, pre-finding, deskewing/fusion, plotting and overall analysis workflow
+* Yuriy Alexandrov — MATLAB quantification workflow `quantification/`
+* Kanad N. Mandke — R mixed-effects statistical analysis in `statistics/`
 
 ## License
+
+This repository is released under the MIT License. See the `LICENSE` file for details.
+
+Some components depend on or were adapted from third-party research software, including `npy2bdv` and ALYtools. Reuse of those components should also follow the terms of their original licences.
+
+
 
 
