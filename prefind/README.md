@@ -148,3 +148,8 @@ The tracking/timelapse features were removed to keep this repo stateless:
 - no tracking-specific large-radius mode
 
 Everything else in the prefind method should remain recognisable from the original scripts.
+
+## supporting code for reading Nikon nd2 files
+Tally Lambert et al:
+.nd2 (Nikon NIS Elements) file reader.
+<https://github.com/tlambert03/nd2>
