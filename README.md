@@ -6,7 +6,7 @@ Archival code and processed data snapshot accompanying the paper:
 
 The data underlying the paper is freely available here:
 
-<https://www.ebi.ac.uk/biostudies/submissions/edit/S-BIAD3591>
+<https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BIAD3591>
 
 This repository records the acquisition, pre-finding, deskewing/fusion, quantification, plotting and statistical-analysis workflow used for the multi-site dOPM reproducibility study.
 
