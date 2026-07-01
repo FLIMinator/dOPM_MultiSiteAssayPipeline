@@ -77,3 +77,4 @@ Relevant upstream tools and publications include:
 - BigDataViewer: Pietzsch et al., “BigDataViewer: visualization and processing for large image data sets”, Nature Methods, 2015.
 - BigStitcher: Hörl et al., “BigStitcher: reconstructing high-resolution image datasets of cleared and expanded samples”, Nature Methods, 2019.
 - Bead-based SPIM registration: Preibisch et al., “Software for bead-based registration of selective plane illumination microscopy data”, Nature Methods, 2010.
+- Supporting code for reading Nikon nd2 files Tally Lambert et al - https://github.com/tlambert03/nd2
